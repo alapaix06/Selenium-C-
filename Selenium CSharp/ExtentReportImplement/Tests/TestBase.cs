@@ -3,16 +3,19 @@ using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using Optional;
-using Selenium_CSharp.ExtentReport.Utility.ExtentReport;
+using Selenium_CSharp.Extent.Utility.ExtentReport;
 
 namespace Selenium_CSharp.Tests;
 
+/// <summary>
+/// Class that configures and is used as a base for extent report
+/// </summary>
 public class TestBase
 {
     protected WebDriver Driver;
 
     /// <summary>
-    /// 
+    ///  SetUp to init the extent report
     /// </summary>
     [OneTimeSetUp]
     public void StartExtentReport()
@@ -21,7 +24,7 @@ public class TestBase
     }
 
     /// <summary>
-    /// 
+    /// Method to create the report based on the result.
     /// </summary>
     protected void EndExtentReport()
     {

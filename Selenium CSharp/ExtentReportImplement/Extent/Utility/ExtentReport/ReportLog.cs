@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using Optional;
 
-namespace Selenium_CSharp.ExtentReport.Utility.ExtentReport;
+namespace Selenium_CSharp.Extent.Utility.ExtentReport;
 
 /// <summary>
 /// / Class that contains the different methods for the answers of the tests and integrates them as extent reports
