@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 using Optional;
 using Selenium_CSharp.ExtentReport.Utility.ExtentReport;
 
-namespace Selenium_CSharp.Tests;
+namespace Selenium_CSharp;
 
 public class TestBase
 {

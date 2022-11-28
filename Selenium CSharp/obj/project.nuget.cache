@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "EnvxybHadwU+nuPGU4+tRnDrFA9iA/avcCqV6pvchX8pm5JufFJcJ47Cgf9Nq4Bub+aLppq/8uKRkwW0Kl1lDQ==",
+  "dgSpecHash": "/Tr4k4hYtMsEylgXoSBCzKvPFPGOPh8+StPD6QD/7CkaLYKrIbh3tAK+2PVgir1NgUGm7wCjMTLSrT5Kjd/kMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Adams Lapaix\\Documents\\GitHub\\Selenium-C-\\Selenium CSharp\\Selenium CSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Adams Lapaix\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\Adams Lapaix\\.nuget\\packages\\dnsclient\\1.2.0\\dnsclient.1.2.0.nupkg.sha512",
+    "C:\\Users\\Adams Lapaix\\.nuget\\packages\\dotnetseleniumextras.pageobjects\\3.11.0\\dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512",
+    "C:\\Users\\Adams Lapaix\\.nuget\\packages\\dotnetseleniumextras.pageobjects.core\\4.3.0\\dotnetseleniumextras.pageobjects.core.4.3.0.nupkg.sha512",
+    "C:\\Users\\Adams Lapaix\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\Adams Lapaix\\.nuget\\packages\\extentreports\\4.1.0\\extentreports.4.1.0.nupkg.sha512",
     "C:\\Users\\Adams Lapaix\\.nuget\\packages\\extentreports.core\\1.0.3\\extentreports.core.1.0.3.nupkg.sha512",
     "C:\\Users\\Adams Lapaix\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",

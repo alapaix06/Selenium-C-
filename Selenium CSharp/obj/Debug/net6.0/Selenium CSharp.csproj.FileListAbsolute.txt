@@ -174,3 +174,5 @@ C:\Users\Adams Lapaix\Documents\GitHub\Selenium-C-\Selenium CSharp\obj\Debug\net
 C:\Users\Adams Lapaix\Documents\GitHub\Selenium-C-\Selenium CSharp\obj\Debug\net6.0\Selenium CSharp.pdb
 C:\Users\Adams Lapaix\Documents\GitHub\Selenium-C-\Selenium CSharp\obj\Debug\net6.0\Selenium CSharp.genruntimeconfig.cache
 C:\Users\Adams Lapaix\Documents\GitHub\Selenium-C-\Selenium CSharp\obj\Debug\net6.0\ref\Selenium CSharp.dll
+C:\Users\Adams Lapaix\Documents\GitHub\Selenium-C-\Selenium CSharp\bin\Debug\net6.0\SeleniumExtras.PageObjects.dll
+C:\Users\Adams Lapaix\Documents\GitHub\Selenium-C-\Selenium CSharp\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
