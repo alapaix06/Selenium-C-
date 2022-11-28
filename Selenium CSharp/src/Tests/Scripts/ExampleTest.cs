@@ -10,7 +10,7 @@ namespace Selenium_CSharp.Tests.Scripts;
  */
 public sealed class ExampleTest : TestBase
 {
-    private WebDriverConfig _driverConfig;
+    private WebDriverConfig _driverConfig = null!;
     
     /// <summary>
     /// Method that configures everything that the tests need to start.
