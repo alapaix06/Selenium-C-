@@ -25,7 +25,7 @@ public sealed class ReportLog
     /// </summary>
     /// <param name="message">Successful completion fail message</param>
     /// <param name="media">Media type elements, whether they are images and screenshots</param>
-    public static void Fail(string? message, Option<MediaEntityModelProvider> media)
+    public static void Fail(string message, Option<MediaEntityModelProvider> media)
     {
         media.Match(
             some: (value) =>
