@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 using Optional;
 using Selenium_CSharp.Extent.Utility.ExtentReport;
 
-namespace Selenium_CSharp.Tests;
+namespace Selenium_CSharp;
 
 /// <summary>
 /// Class that configures and is used as a base for extent report
