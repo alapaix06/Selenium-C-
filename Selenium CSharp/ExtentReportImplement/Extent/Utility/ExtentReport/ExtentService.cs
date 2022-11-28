@@ -4,7 +4,7 @@ using AventStack.ExtentReports.Reporter;
 using AventStack.ExtentReports.Reporter.Configuration;
 using Optional;
 
-namespace Selenium_CSharp.ExtentReport.Utility.ExtentReport;
+namespace Selenium_CSharp.Extent.Utility.ExtentReport;
 
 /// <summary>
 /// Class containing the service that configures and instantiates extent report.

@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Selenium_CSharp.ExtentReport.Utility;
+namespace Selenium_CSharp.Extent.Utility;
 
 /// <summary>
 /// Class that stores methods, functions, string, int that serve as utilities.

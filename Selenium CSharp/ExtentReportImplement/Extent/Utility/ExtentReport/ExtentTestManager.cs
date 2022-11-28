@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using AventStack.ExtentReports;
 using Optional;
 
-namespace Selenium_CSharp.ExtentReport.Utility.ExtentReport;
+namespace Selenium_CSharp.Extent.Utility.ExtentReport;
 
 /// <summary>
 /// Class that handles the elements of extent reports, to create test cases and others.

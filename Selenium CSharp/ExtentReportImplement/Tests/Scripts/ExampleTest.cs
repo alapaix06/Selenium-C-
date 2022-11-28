@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Optional;
 using Selenium_CSharp.Configurations;
-using Selenium_CSharp.ExtentReport.Utility.ExtentReport;
+using Selenium_CSharp.Extent.Utility.ExtentReport;
 
 namespace Selenium_CSharp.Tests.Scripts;
 
