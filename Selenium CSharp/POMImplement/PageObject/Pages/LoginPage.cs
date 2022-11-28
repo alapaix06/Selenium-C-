@@ -3,6 +3,9 @@ using SeleniumExtras.PageObjects;
 
 namespace Selenium_CSharp.POMImplement.PageObject.Pages;
 
+/// <summary>
+/// Class that references the login page
+/// </summary>
 public sealed class LoginPage : BasePage
 {
     private readonly string _textExpected = "Logged In Successfully";
@@ -33,10 +36,10 @@ public sealed class LoginPage : BasePage
     private IWebElement LabelLoginSuccess { get; set; }
 
     /// <summary>
-    /// 
+    /// Method to login
     /// </summary>
-    /// <param name="username"></param>
-    /// <param name="password"></param>
+    /// <param name="username">property that receives the string from a user</param>
+    /// <param name="password">property that receives the string from a password</param>
     public void Login(string username, string password)
     {
         WaitElementClickable(Username);
@@ -46,18 +49,19 @@ public sealed class LoginPage : BasePage
     }
 
     /// <summary>
-    /// 
+    /// Method that waits for the login label success
     /// </summary>
-    /// <returns></returns>
+    /// <returns>true if the element was displayed</returns>
     public bool IsLoginSuccess()
     {
         WaitElementByText(LabelLoginSuccess, _textExpected);
         return LabelLoginSuccess.Displayed;
     }
+    
     /// <summary>
-    /// 
+    /// Method that looks for the title of the page
     /// </summary>
-    /// <returns></returns>
+    /// <returns>A string of the page title</returns>
     public string PageTitle()
     {
         return Driver.Title;

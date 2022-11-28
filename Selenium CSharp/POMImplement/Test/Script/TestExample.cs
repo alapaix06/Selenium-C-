@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Optional;
 using Selenium_CSharp.Configurations;
-using Selenium_CSharp.ExtentReport.Utility.ExtentReport;
+using Selenium_CSharp.Extent.Utility.ExtentReport;
 using Selenium_CSharp.POMImplement.PageObject.Pages;
 
 
@@ -41,7 +41,7 @@ public sealed class TestExample : TestBase
     {
         Driver.Navigate().GoToUrl(_baseUrl);
         _loginPage.Login(username, password);
-        Assert.AreEqual(_titleExpected, Driver.Title);
+        Assert.AreEqual(_titleExpected, _loginPage.PageTitle());
         Assert.IsTrue(_loginPage.IsLoginSuccess());
     }
     
