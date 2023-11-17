@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Miviot WebApi
+  description: |-
+    ## **Integración del Servicio Web para Creación de Solicitudes de Préstamos con Polux User Portal**
+
+    Bienvenido a la API de integración de Polux user portal, diseñada para facilitar el proceso de manejo de solicitudes de préstamos y gestión de documentos relacionados. Esta API proporciona endpoints específicos para la creación y manipulación de lotes de solicitudes de préstamos, así como la carga de documentos asociados a través del servidor. La integración con esta API permitirá a los usuarios interactuar eficientemente con el sistema Polux para el seguimiento y procesamiento de solicitudes.
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8020'
+  - url: 'http://localhost:8020'
+paths:
+  /batch-requests:
+    post:
+      tags:
+        - default
+      summary: Cargar lote de solicitudes de préstamos
+      description: |-
+        ## **Descripción de API para enviar lotes de solicitudes de préstamos por el equipo de Miviot.**
+
+        Este endpoint se utiliza para enviar solicitudes de lotes al servidor. El servidor procesará las solicitudes y devolverá una respuesta con el código de estado 201 (creado exitosamente), conjunto con un `id` (identificador de registro) que es utilizado para cargar el registro en Polux user portal y se utilizará para anexar los documentos adjuntos a la solicitud.
+
+        ### Cómo Enviar un lote de solicitudes de préstamos:
+
+        Realiza una solicitud HTTP POST a la siguiente URL: `http://dev1bhnapp01:8200/batchRequests`.
+
+        El cuerpo de la solicitud debe incluir los parámetros necesarios en formato JSON.
+
+        ### **Cuerpo de la solicitud:**
+
+        - `requestType` (string): Indica el tipo de solicitud, que será "Solicitud de préstamo".
+        - `user` (string): El usuario asociado que crea la solicitud.
+        - `date` (string): La fecha de la solicitud.
+        - `batch` (array de objetos): Representa las solicitudes del lote. Cada objeto contiene la siguiente información:
+            - `clientInformation` (object): Información sobre el cliente.
+                - `clientName` (string): El nombre del cliente.
+                - `birthDate` (string): La fecha de nacimiento del cliente.
+                - `identificationType` (string): El tipo de identificación utilizada por el cliente.
+                - `identificationNumber` (string): El número de identificación del cliente.
+                - `nationality` (string): La nacionalidad del cliente.
+                - `pep` (boolean): Indica si el cliente es una persona políticamente expuesta.
+                - `gender` (string): El género del cliente.
+                - `academicLevel` (string): El nivel académico del cliente.
+            - `contactInformation` (object): Información sobre los detalles de contacto del cliente.
+                - `phoneNumber` (string): El número de teléfono del cliente.
+                - `mobileNumber` (string): El número de teléfono móvil del cliente.
+                - `email` (string): La dirección de correo electrónico del cliente.
+                - `address` (string): La dirección del cliente.
+                - `province` (string): La provincia de la dirección del cliente.
+                - `district` (string): El distrito de la dirección del cliente.
+                - `corregimiento` (string): El corregimiento de la dirección del cliente.
+                - `sector` (string): El sector de la dirección del cliente.
+            - `laborInformation` (object): Información sobre los detalles laborales del cliente.
+                - `laborStatus` (string): El estado laboral del cliente.
+                - `companyName` (string): El nombre de la empresa donde trabaja el cliente.
+                - `dateOfAdmission` (string): La fecha de admisión a la empresa.
+                - `companyAddress` (string): La dirección de la empresa.
+                - `position` (string): El cargo del cliente en la empresa.
+                - `companyPhoneNumber` (string): El número de teléfono de la empresa.
+                - `extensionNumber` (string): El número de extensión del cliente en la empresa.
+                - `paymentSchemes` (string): Los esquemas de pago utilizados por el cliente.
+                - `monthlySalary` (string): El salario mensual del cliente.
+                - `otherIncome` (string): Cualquier otro ingreso recibido por el cliente.
+            - `propertyInformation` (object): Información sobre la propiedad.
+                - `project` (string): El proyecto de la propiedad.
+                - `batchNumber` (string): El número de lote de la propiedad.
+                - `provinceProperty` (string): La provincia de la propiedad.
+                - `districtProperty` (string): El distrito de la propiedad.
+                - `corregimientoProperty` (string): El corregimiento de la propiedad.
+                - `sectorProperty` (string): El sector de la propiedad.
+                - `costOfProperty` (string): El costo de la propiedad.
+
+        ### Respuesta de la solicitud:
+
+        Al enviar adecuadamente una solicitud de préstamos el endpoint nos devolverá un código de respuesta 201 Created indicando que se creó la solicitud exitosamente, el cuál también arrojará una propiedad `id` que debemos utilizar para cargar los documentos relacionados a dicho lote de solicitudes.
+      requestBody:
+        content: {}
+      responses:
+        '201':
+          description: Successful response
+          content:
+            application/json: {}
+  /load-files:
+    post:
+      tags:
+        - default
+      summary: Cargar archivos asociados a solicitudes de préstamos
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
